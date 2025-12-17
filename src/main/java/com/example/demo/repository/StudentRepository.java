@@ -1,45 +1,11 @@
-package com.example.demo.entity;
+package com.example.demo.repository;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
-@Entity
-public class StudentEntity{
+import com.example.demo.entity.StudentEntity;
 
-     @Id
-     @GeneratedValue(strategy=GenerationType.IDENTITY)
-    private Long id;
-    private String name;
-    private String email;
-    private float cgpa;
+@Repository
+public interface StudentRepository extends JpaRepository<StudentEntity, Long>{
 
-    public StudentEntity(Long id,String name,String email,float cgpa){
-        this.id=id;
-        this.name=name;
-        this.email=email;
-        this.cgpa=cgpa;
-    }
-    public StudentEntity(){
-
-    }
-    public void setName(String name){
-        this.name=name;
-    }
-    public String getName(){
-        return this.name;
-    }
-    public void setEmail(){
-        this.email=email;
-    }
-    public String getEmail(){
-        return this.email;
-    }
-    public void setCgpa(){
-        this.cgpa=cgpa;
-    }
-    public float getcgpa(){
-        return this.cgpa;   
-    }
 }
