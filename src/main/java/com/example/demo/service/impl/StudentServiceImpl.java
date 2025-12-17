@@ -10,7 +10,7 @@ import com.example.demo.repository.StudentRepository;
 import com.example.demo.service.StudentService;
 
 @Service
-public class Stud
+public class StudentServiceImpl imple
 entServiceImpl implements StudentService {
 
     @Autowired
