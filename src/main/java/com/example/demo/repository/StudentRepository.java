@@ -1,3 +1,5 @@
 package com.example.demo.repository;
 
-public interface StuedntRepository extends 
+public interface StuedntRepository {
+    
+}
